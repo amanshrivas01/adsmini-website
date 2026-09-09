@@ -66,7 +66,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center border-t-2 border-ink pt-4 md:pt-6 text-[10px] md:text-[12px] font-bold uppercase gap-2 md:gap-2 text-center md:text-left">
           <p>&copy; 2026 Ads Mini. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <Link href="#" className="hover:text-tangerine transition-colors">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-tangerine transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-tangerine transition-colors">Terms of Service</Link>
           </div>
         </div>
