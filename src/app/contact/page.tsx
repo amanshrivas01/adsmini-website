@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { env } from "~/env";
+import { siteConfig } from "~/data/data";
 import { interestOptions, contactFormSchema, type ContactFormData } from "~/lib/contact-schema";
 
 export default function ContactPage() {
@@ -130,15 +131,15 @@ export default function ContactPage() {
                   <ul className="space-y-4 text-[18px] font-medium">
                     <li className="flex flex-col">
                       <span className="text-[12px] font-label-mono uppercase tracking-widest text-secondary font-bold mb-1">Email</span>
-                      <a href={`mailto:${env.NEXT_PUBLIC_CONTACT_EMAIL}`} className="hover:text-tangerine transition-colors font-bold">{env.NEXT_PUBLIC_CONTACT_EMAIL}</a>
+                      <a href={siteConfig.contact.emailHref} className="hover:text-tangerine transition-colors font-bold">{siteConfig.contact.email}</a>
                     </li>
                     <li className="flex flex-col">
                       <span className="text-[12px] font-label-mono uppercase tracking-widest text-secondary font-bold mb-1">Phone</span>
-                      <a href="tel:+918519022399" className="hover:text-tangerine transition-colors font-bold">+91 8519022399</a>
+                      <a href={siteConfig.contact.phoneHref} className="hover:text-tangerine transition-colors font-bold">{siteConfig.contact.phone}</a>
                     </li>
                     <li className="flex flex-col">
                       <span className="text-[12px] font-label-mono uppercase tracking-widest text-secondary font-bold mb-1">Business Hours</span>
-                      <span className="font-bold">Monday to Friday, 11:00 AM &ndash; 8:00 PM IST</span>
+                      <span className="font-bold">{siteConfig.contact.businessHours ?? "Monday to Friday, 11:00 AM – 8:00 PM IST"}</span>
                     </li>
                   </ul>
                 </div>
@@ -389,8 +390,8 @@ export default function ContactPage() {
                 <p className="text-[14px] font-label-mono uppercase tracking-widest text-tangerine mb-2 font-bold">For Businesses &mdash; Digital Marketing</p>
                 <p className="text-[18px] md:text-[24px] font-bold mb-6">Want a free audit of your current digital presence?</p>
                 <Button variant="secondary" size="lg" asChild>
-                  <Link href="/services">
-                    Request a Free Digital Audit
+                  <Link href={siteConfig.ctas.digitalAudit.href}>
+                    {siteConfig.ctas.digitalAudit.label}
                   </Link>
                 </Button>
               </div>
@@ -398,8 +399,8 @@ export default function ContactPage() {
                 <p className="text-[14px] font-label-mono uppercase tracking-widest text-tangerine mb-2 font-bold">For Businesses &mdash; Recruitment</p>
                 <p className="text-[18px] md:text-[24px] font-bold mb-6">Have a specific hiring need?</p>
                 <Button variant="secondary" size="lg" asChild>
-                  <Link href="/about">
-                    Submit a Hiring Brief
+                  <Link href={siteConfig.ctas.hiringBrief.href}>
+                    {siteConfig.ctas.hiringBrief.label}
                   </Link>
                 </Button>
               </div>

@@ -2,10 +2,9 @@ import Image from "next/image";
 import { type Metadata } from "next";
 import { CallToAction } from "~/components/ui/CallToAction";
 import { PageHero } from "~/components/ui/PageHero";
+import { constructMetadata } from "~/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Our Work & Client Results | Ads Mini",
-};
+export const metadata: Metadata = constructMetadata("/work");
 
 type Metric = {
   value: string;
@@ -376,21 +375,8 @@ function WorkCard({
       className={`${isMeta ? "bg-surface-container-lowest border-ink text-ink" : "bg-paper border-ink"} brutalist-shadow flex h-full flex-col justify-between border-4 p-4 md:p-6`}
     >
       <div>
-        {/* Header with Square Logo (if available) & Industry Badge */}
-        <div className="border-ink/20 mb-5 flex items-center justify-between gap-4 border-b-2 pb-4">
-          {data.logo ? (
-            <div className="border-ink bg-paper relative h-14 w-14 shrink-0 overflow-hidden border-2 shadow-[2px_2px_0_#000]">
-              <Image
-                unoptimized
-                src={data.logo}
-                alt={`${data.clientName} logo`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ) : (
-            <div />
-          )}
+        {/* Header with Industry Badge */}
+        <div className="border-ink/20 mb-5 flex items-center justify-end border-b-2 pb-4">
           <span className="bg-paper border-ink border px-2.5 py-1 text-[11px] font-bold tracking-wider uppercase opacity-80 md:text-[12px]">
             {data.industry}
           </span>
@@ -433,17 +419,6 @@ function FeaturedWorkCard({
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
         <div className="space-y-3 md:w-2/3">
           <div className="flex items-center gap-3">
-            {data.logo && (
-              <div className="border-ink bg-paper relative h-14 w-14 shrink-0 overflow-hidden border-2 shadow-[2px_2px_0_#000]">
-                <Image
-                  unoptimized
-                  src={data.logo}
-                  alt={`${data.clientName} logo`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            )}
             <span className="text-[12px] font-bold tracking-wider uppercase opacity-80 md:text-[14px]">
               {data.industry}
             </span>

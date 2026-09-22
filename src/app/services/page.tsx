@@ -2,12 +2,9 @@ import { type Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "~/components/ui/PageHero";
+import { constructMetadata } from "~/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Digital Marketing & Recruitment Services | Ads Mini",
-  description:
-    "At AdsMini, we bring Digital Marketing and Recruitment together to help businesses scale with confidence. Grow faster, hire smarter.",
-};
+export const metadata: Metadata = constructMetadata("/services");
 
 export default function ServicesPage() {
   return (

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
+import { siteConfig } from "~/data/data";
 
 export interface CallToActionProps extends React.HTMLAttributes<HTMLElement> {
   title: string;
@@ -12,8 +13,8 @@ export interface CallToActionProps extends React.HTMLAttributes<HTMLElement> {
 export function CallToAction({
   title,
   description,
-  buttonText = "Talk to Our Team",
-  buttonHref = "/contact",
+  buttonText = siteConfig.ctas.talkToTeam.label,
+  buttonHref = siteConfig.ctas.talkToTeam.href,
   className,
   ...props
 }: CallToActionProps) {

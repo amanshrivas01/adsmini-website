@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { env } from "~/env";
+import { siteConfig } from "~/data/data";
 
 export function Footer() {
   return (
@@ -34,13 +34,13 @@ export function Footer() {
           <div className="col-span-1 md:col-span-4">
             <h3 className="text-[12px] md:text-[14px] font-label-mono uppercase tracking-widest text-secondary mb-2 md:mb-3">Contact</h3>
             <ul className="space-y-1.5 text-[12px] md:text-[16px] font-bold mb-6">
-              <li><a href={`mailto:${env.NEXT_PUBLIC_CONTACT_EMAIL}`} className="hover:text-tangerine transition-colors block">{env.NEXT_PUBLIC_CONTACT_EMAIL}</a></li>
-              <li><a href="tel:+918519022399" className="hover:text-tangerine transition-colors block">+91 8519022399</a></li>
+              <li><a href={siteConfig.contact.emailHref} className="hover:text-tangerine transition-colors block">{siteConfig.contact.email}</a></li>
+              <li><a href={siteConfig.contact.phoneHref} className="hover:text-tangerine transition-colors block">{siteConfig.contact.phone}</a></li>
             </ul>
 
             <h3 className="text-[12px] md:text-[14px] font-label-mono uppercase tracking-widest text-secondary mb-2 md:mb-3">Socials</h3>
             <div className="flex flex-row items-center gap-3">
-              <a href="https://www.instagram.com/adsmini_meme?igsh=NWx0YXp3dXlyOXZz&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-ink text-surface-container-lowest border-2 border-ink p-2.5 sm:px-4 sm:py-2 font-black uppercase brutalist-shadow-sm hover:bg-tangerine hover:text-ink transition-colors flex items-center justify-center gap-2 text-[14px]">
+              <a href={siteConfig.contact.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-ink text-surface-container-lowest border-2 border-ink p-2.5 sm:px-4 sm:py-2 font-black uppercase brutalist-shadow-sm hover:bg-tangerine hover:text-ink transition-colors flex items-center justify-center gap-2 text-[14px]">
                 <Image
                   src="/instagram.png"
                   alt="Instagram"
@@ -49,7 +49,7 @@ export function Footer() {
                 />
                 <span className="hidden sm:inline">Instagram</span>
               </a>
-              <a href="https://www.linkedin.com/company/adsmini/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-ink text-surface-container-lowest border-2 border-ink p-2.5 sm:px-4 sm:py-2 font-black uppercase brutalist-shadow-sm hover:bg-tangerine hover:text-ink transition-colors flex items-center justify-center gap-2 text-[14px]">
+              <a href={siteConfig.contact.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-ink text-surface-container-lowest border-2 border-ink p-2.5 sm:px-4 sm:py-2 font-black uppercase brutalist-shadow-sm hover:bg-tangerine hover:text-ink transition-colors flex items-center justify-center gap-2 text-[14px]">
                 <Image
                   src="/linkedin.png"
                   alt="LinkedIn"
