@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import React from "react";
+import { siteConfig } from "~/data/data";
 
 export function WhatsAppButton() {
-  const whatsappNumber = "918519022399";
-  const defaultMessage = encodeURIComponent("Hello AdsMini, I would like to inquire about your services!");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
+  const whatsappUrl = siteConfig.contact.whatsappHref;
 
   return (
     <a
@@ -14,7 +13,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with AdsMini on WhatsApp"
-      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 group flex items-center gap-2"
+      className="fixed bottom-16 right-5 sm:bottom-20 sm:right-6 md:bottom-24 md:right-8 z-50 group flex items-center gap-2"
     >
       {/* Floating Badge Label */}
       <span className="hidden sm:inline-block bg-paper text-ink font-label-mono text-xs font-bold uppercase border-2 border-ink px-3 py-1.5 shadow-[3px_3px_0_#000] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

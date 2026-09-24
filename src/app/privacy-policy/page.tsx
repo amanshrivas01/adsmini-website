@@ -1,12 +1,9 @@
 import { type Metadata } from "next";
 import { PageHero } from "~/components/ui/PageHero";
 import { CallToAction } from "~/components/ui/CallToAction";
+import { constructMetadata } from "~/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Ads Mini",
-  description:
-    "Learn how Ads Mini collects, uses, discloses, and protects your information as a website visitor, marketing client, or job candidate.",
-};
+export const metadata: Metadata = constructMetadata("/privacy-policy");
 
 const sections = [
   { id: "who-this-policy-applies-to", number: "1", title: "Who This Policy Applies To" },

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -9,9 +10,48 @@ import {
   getAllBlogsFromSanity,
   CATEGORY_LABELS,
 } from "~/lib/blogs-data";
+import { siteConfig } from "~/data/data";
 
 interface BlogArticlePageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogBySlugFromSanity(slug);
+
+  if (!post) {
+    return {
+      title: `Article Not Found | ${siteConfig.siteName}`,
+    };
+  }
+
+  const title = `${post.title} | ${siteConfig.siteName} Blog`;
+  const description = post.excerpt;
+  const url = `${siteConfig.baseUrl}/blogs/${post.slug}`;
+  const images = post.coverImage ? [post.coverImage] : undefined;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      siteName: siteConfig.siteName,
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images,
+    },
+  };
 }
 
 export default async function BlogArticlePage({ params }: BlogArticlePageProps) {

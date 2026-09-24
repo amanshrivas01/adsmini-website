@@ -1,11 +1,9 @@
 import { type Metadata } from "next";
 import { CallToAction } from "~/components/ui/CallToAction";
 import { PageHero } from "~/components/ui/PageHero";
+import { constructMetadata } from "~/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "End-to-End Recruitment Agency | IT, Healthcare, Executive Hiring | Ads Mini",
-  description: "Ads Mini provides end-to-end recruitment solutions: IT hiring, healthcare staffing, executive search, campus placement and bulk hiring. The right person for the right role, every time.",
-};
+export const metadata: Metadata = constructMetadata("/services/recruitment");
 
 export default function RecruitmentPage() {
   return (
@@ -48,16 +46,16 @@ export default function RecruitmentPage() {
               <div className="bg-paper text-ink border-4 border-tangerine p-6 md:p-8 brutalist-shadow">
                 <h3 className="font-bold text-[20px] md:text-[24px] uppercase mb-4 text-tangerine">What end-to-end recruitment covers:</h3>
                 <ul className="space-y-3 font-medium text-[16px]">
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Hiring needs analysis and role briefing</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Job description creation and employer branding support</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Multi-channel sourcing &mdash; job boards, LinkedIn, referrals, direct outreach</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> ATS management and candidate database building</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Resume screening and competency-based shortlisting</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Structured interview scheduling and coordination</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Skills assessments and background verification</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Offer management, negotiation support and documentation</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> Onboarding support and first-30-day check-ins</li>
-                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box</span> MIS reporting and recruitment analytics</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Hiring needs analysis and role briefing</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Job description creation and employer branding support</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Multi-channel sourcing &mdash; job boards, LinkedIn, referrals, direct outreach</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> ATS management and candidate database building</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Resume screening and competency-based shortlisting</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Structured interview scheduling and coordination</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Skills assessments and background verification</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Offer management, negotiation support and documentation</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> Onboarding support and first-30-day check-ins</li>
+                  <li className="flex items-start gap-3"><span className="material-symbols-outlined text-tangerine mt-1">check_box_outline_blank</span> MIS reporting and recruitment analytics</li>
                 </ul>
               </div>
             </div>
@@ -154,6 +152,19 @@ export default function RecruitmentPage() {
           </div>
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+               {/* Card 1: High-Volume & Bulk Hiring */}
+               <div className="bg-surface-container-lowest border-4 border-ink p-8 brutalist-shadow">
+                 <h3 className="text-[28px] uppercase font-black mb-4 leading-tight">High-Volume &amp; Bulk Hiring</h3>
+                 <p className="mb-6 text-[16px] leading-[1.5]">When a business needs to scale fast, opening a new location, launching a new product line, or expanding a BPO operation, our bulk hiring team deploys immediately. We&apos;ve managed large-scale recruitment drives for domestic and international voice and chat processes, handling everything from sourcing to onboarding documentation.</p>
+                 <ul className="list-disc pl-5 space-y-2 text-[16px] leading-[1.5] font-bold">
+                   <li>Rapid deployment for 20 to 500+ positions</li>
+                   <li>Multi-city sourcing and screening drives</li>
+                   <li>SLA-driven delivery with daily progress reporting</li>
+                   <li>Offer-to-joining tracking and attrition support</li>
+                 </ul>
+               </div>
+
+               {/* Card 2: Campus Placement Drives (Highlighted in Tangerine) */}
                <div className="bg-tangerine border-4 border-ink p-8 brutalist-shadow">
                  <h3 className="text-[28px] uppercase font-black mb-4 leading-tight">Campus Placement Drives</h3>
                  <p className="mb-6 text-[16px] leading-[1.5]">We support educational institutions and companies running structured campus placement programmes, from pre-placement talks and aptitude assessments through to final placement coordination. We connect fresh graduates with companies building their early-career pipeline, and help businesses build talent pipelines from institutions that match their culture and requirements.</p>
@@ -165,16 +176,8 @@ export default function RecruitmentPage() {
                    <li>Bulk hiring drives for IT &amp; Non-IT, and service sector companies</li>
                  </ul>
                </div>
-               <div className="bg-surface-container-lowest border-4 border-ink p-8 brutalist-shadow">
-                 <h3 className="text-[28px] uppercase font-black mb-4 leading-tight">High-Volume &amp; Bulk Hiring</h3>
-                 <p className="mb-6 text-[16px] leading-[1.5]">When a business needs to scale fast, opening a new location, launching a new product line, or expanding a BPO operation, our bulk hiring team deploys immediately. We&apos;ve managed large-scale recruitment drives for domestic and international voice and chat processes, handling everything from sourcing to onboarding documentation.</p>
-                 <ul className="list-disc pl-5 space-y-2 text-[16px] leading-[1.5] font-bold">
-                   <li>Rapid deployment for 20 to 500+ positions</li>
-                   <li>Multi-city sourcing and screening drives</li>
-                   <li>SLA-driven delivery with daily progress reporting</li>
-                   <li>Offer-to-joining tracking and attrition support</li>
-                 </ul>
-               </div>
+
+               {/* Card 3: Contract & Flexible Staffing */}
                <div className="bg-paper border-4 border-ink p-8 brutalist-shadow">
                  <h3 className="text-[28px] uppercase font-black mb-4 leading-tight">Contract &amp; Flexible Staffing</h3>
                  <p className="mb-6 text-[16px] leading-[1.5]">Not every hire needs to be permanent. When demand spikes or a project needs specialised skills for a defined period, our staffing team provides contract professionals, temporary placements and project-based workforce solutions.</p>
@@ -191,9 +194,9 @@ export default function RecruitmentPage() {
 
         {/* Process Timeline */}
         <section className="py-20 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-tangerine border-ink-b-2 relative grid-bg">
-          <div className="absolute inset-0 pointer-events-none opacity-20">
-            <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-              <path className="dashed-path" d="M 100 100 Q 300 300 500 100 T 900 300" fill="none" stroke="#000" strokeWidth="4"></path>
+          <div className="absolute inset-0 pointer-events-none opacity-20 overflow-hidden">
+            <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path className="dashed-path" d="M 0 340 Q 300 220 600 340 T 1200 340" fill="none" stroke="#000" strokeWidth="4"></path>
             </svg>
           </div>
           <div className="text-center mb-12 md:mb-24 relative z-10">

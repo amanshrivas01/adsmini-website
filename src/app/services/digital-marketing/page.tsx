@@ -2,12 +2,9 @@ import { type Metadata } from "next";
 import Image from "next/image";
 import { CallToAction } from "~/components/ui/CallToAction";
 import { PageHero } from "~/components/ui/PageHero";
+import { constructMetadata } from "~/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Digital Marketing Services | SEO, PPC, Social Media & Performance | Ads Mini",
-  description:
-    "We design and execute performance-focused digital marketing strategies that generate real business outcomes: more traffic, better qualified leads, and stronger revenue.",
-};
+export const metadata: Metadata = constructMetadata("/services/digital-marketing");
 
 const seoStack = [
   { title: "Technical SEO", desc: "Site architecture, Core Web Vitals, crawlability, indexing" },
