@@ -67,7 +67,7 @@ export function Footer() {
           <p>&copy; 2026 Ads Mini. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link href="/privacy-policy" className="hover:text-tangerine transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-tangerine transition-colors">Terms of Service</Link>
+            <Link href="/terms-of-service" className="hover:text-tangerine transition-colors">Terms of Service</Link>
           </div>
         </div>
 
