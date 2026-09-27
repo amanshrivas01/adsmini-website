@@ -14,7 +14,7 @@ export default function HomePage() {
       {/* 1. Hero: Massive headline */}
       <section className="relative w-full min-h-[calc(100svh-60px)] border-b-4 border-ink bg-surface-container-lowest flex flex-col justify-center pt-6 pb-12 md:py-12 overflow-hidden bg-grid-pattern">
         {/* Doodle 5: Growth Inspectors in Hero Left */}
-        <div className="hidden lg:block absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-8 lg:left-8 z-20 w-28 sm:w-36 md:w-44 lg:w-48 xl:w-56 h-auto pointer-events-none float-animation">
+        <div className="hidden lg:block absolute top-14 left-4 sm:top-16 sm:left-6 lg:top-18 lg:left-8 z-20 w-28 sm:w-36 md:w-44 lg:w-48 xl:w-56 h-auto pointer-events-none float-animation">
           <Image
             src="/doodle5.png"
             alt="Growth Inspectors Doodle"

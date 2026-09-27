@@ -22,14 +22,6 @@ type WorkResult = {
   logoHeight?: number;
 };
 
-type ClientLogoItem = {
-  name: string;
-  tagline?: string;
-  logo?: string;
-  logoWidth?: number;
-  logoHeight?: number;
-};
-
 const googleAdsResults: WorkResult[] = [
   {
     clientName: "Tresmode",
@@ -208,159 +200,6 @@ const saRenovationResult: WorkResult = {
     { value: "$26.71", label: "Avg. Cost/Lead" },
   ],
 };
-
-const digitalMarketingClientsWithLogos: ClientLogoItem[] = [
-  { name: "dgMarket", tagline: "Global Government Procurement" },
-  {
-    name: "Tresmode",
-    tagline: "Footwear E-Commerce",
-    logo: "/Tresmode.jpeg",
-    logoWidth: 415,
-    logoHeight: 739,
-  },
-  { name: "Neera", tagline: "E-Commerce / D2C" },
-  {
-    name: "Isha Life",
-    tagline: "D2C Clothing Brand",
-    logo: "/Isha.jpeg",
-    logoWidth: 335,
-    logoHeight: 597,
-  },
-  { name: "Renew Drycleaners", tagline: "UK Home Services" },
-  {
-    name: "Tech Fynder",
-    tagline: "Tech Recruitment",
-    logo: "/techfynder.jpeg",
-    logoWidth: 200,
-    logoHeight: 200,
-  },
-  {
-    name: "Moon Tours",
-    tagline: "Travel & Tourism",
-    logo: "/moonturandtravel.jpeg",
-    logoWidth: 447,
-    logoHeight: 447,
-  },
-  { name: "Chalbo India", tagline: "EV Mobility" },
-  { name: "Sizzle", tagline: "F&B E-Commerce" },
-  { name: "The Digital Bundle", tagline: "Digital Products" },
-  { name: "Okapi", tagline: "E-Commerce" },
-  { name: "GT Groups", tagline: "Real Estate" },
-  { name: "Catchy Trade", tagline: "Finance & Trading" },
-  { name: "Stabo Life", tagline: "Health & Wellness" },
-  {
-    name: "S&A Renovation",
-    tagline: "Canada Home Renovation",
-    logo: "/sr.jpeg",
-    logoWidth: 447,
-    logoHeight: 447,
-  },
-  {
-    name: "TRUE Hospitals",
-    tagline: "Cosmetic & Aesthetic Hospital",
-    logo: "/truehospital.jpeg",
-    logoWidth: 1280,
-    logoHeight: 458,
-  },
-  {
-    name: "Theindiglobal",
-    tagline: "Handloom Textile Brand",
-    logo: "/theindiglobal.jpeg",
-    logoWidth: 1200,
-    logoHeight: 628,
-  },
-  {
-    name: "KIK 365",
-    tagline: "Gaming Platform",
-    logo: "/kik365.jpeg",
-    logoWidth: 972,
-    logoHeight: 210,
-  },
-  {
-    name: "Show Stopper",
-    tagline: "Clothing Brand",
-    logo: "/showstopper.jpeg",
-    logoWidth: 1185,
-    logoHeight: 1327,
-  },
-  {
-    name: "GS Textile Seoni",
-    tagline: "Clothing Brand",
-    logo: "/bajaj.jpeg",
-    logoWidth: 250,
-    logoHeight: 300,
-  },
-  {
-    name: "Z-Force",
-    tagline: "Commercial E-Rickshaw",
-    logo: "/zforce.jpeg",
-    logoWidth: 447,
-    logoHeight: 447,
-  },
-  {
-    name: "T Shubh Mangal Garden",
-    tagline: "Event & Banquet Venue",
-    logo: "/tshubhmangalgardenandresort.jpeg",
-    logoWidth: 888,
-    logoHeight: 888,
-  },
-  {
-    name: "Kishan Patel Career Counselling",
-    tagline: "Education Consulting",
-    logo: "/bestcareercounselling.jpeg",
-    logoWidth: 414,
-    logoHeight: 483,
-  },
-  {
-    name: "Tata Motors Commercial",
-    tagline: "Commercial Vehicles",
-    logo: "/tata.jpeg",
-    logoWidth: 451,
-    logoHeight: 414,
-  },
-];
-
-const recruitmentClientsWithLogos: ClientLogoItem[] = [
-  {
-    name: "Efficacy Global",
-    tagline: "Global Talent Solutions",
-    logo: "/efficiencyglobal.jpeg",
-    logoWidth: 447,
-    logoHeight: 447,
-  },
-  {
-    name: "Transcom",
-    tagline: "Global Customer Care & Hiring",
-    logo: "/transcom.jpeg",
-    logoWidth: 600,
-    logoHeight: 600,
-  },
-  {
-    name: "Webkorps",
-    tagline: "IT & Software Engineering",
-    logo: "/webkorps.jpeg",
-    logoWidth: 500,
-    logoHeight: 500,
-  },
-  {
-    name: "Tekite Solution",
-    tagline: "Technology & Software",
-    logo: "/tekit.jpeg",
-    logoWidth: 1553,
-    logoHeight: 417,
-  },
-  {
-    name: "TRUE Hospitals",
-    tagline: "Healthcare & Clinical Staffing",
-    logo: "/truehospital.jpeg",
-    logoWidth: 1280,
-    logoHeight: 458,
-  },
-  { name: "Dovin", tagline: "Enterprise Technology" },
-  { name: "NA Supreme", tagline: "Corporate Services" },
-  { name: "Kuber Alpha", tagline: "Financial Services" },
-  { name: "Skyline", tagline: "Real Estate & Infra" },
-];
 
 function WorkCard({
   data,
@@ -618,13 +457,29 @@ export default function WorkPage() {
 
         {/* Combined Infinite Marquee Client Logo Showcase */}
         {(() => {
-          const combinedLogos = Array.from(
-            new Map(
-              [...digitalMarketingClientsWithLogos, ...recruitmentClientsWithLogos]
-                .filter((client) => Boolean(client.logo))
-                .map((client) => [client.logo, client])
-            ).values()
-          );
+          const clientLogos = [
+            "/client-logos/07bc7502-4ea5-4988-b666-b634dfb48be4.png",
+            "/client-logos/11be7b93-a014-4d27-9d46-9d45cc1add1a.png",
+            "/client-logos/320d078b-aab1-43e6-b4c4-7be1cfc0eddf.png",
+            "/client-logos/39f057ad-5653-4c38-9d2f-0fd08c91fdb2.png",
+            "/client-logos/3af26e0c-4fcb-4cd9-80ba-749dfdd181fb.png",
+            "/client-logos/4cb7984a-f243-4a71-8bab-c25e4a2e08ee.png",
+            "/client-logos/506ca683-8d00-4cc7-bf76-b9c46fafb744.png",
+            "/client-logos/5cd8f8b0-8fe0-49dc-bfe0-b5ecd1463b4c.png",
+            "/client-logos/80e5a9bb-c1f5-4cc7-a82b-bc7a8aeef905.png",
+            "/client-logos/8cca0cff-9846-47fe-8cc5-56ec1bb5fdb9.png",
+            "/client-logos/8e07da69-c5de-4bf5-8ead-72062ac0e3d4.png",
+            "/client-logos/9f618b1a-a67f-48cf-b587-12bac94b4f90.png",
+            "/client-logos/ad84f99d-83c1-4849-9dc6-4d446420eb47.png",
+            "/client-logos/c37d9a65-3fad-4066-a71f-493560e0aeea.png",
+            "/client-logos/ca529483-3710-4de4-9fab-6bc76922606d.png",
+            "/client-logos/d4114ae3-1e2b-40c1-aeff-0a141f9be783.png",
+            "/client-logos/df578090-df3f-4e25-8c8e-dc18853b9348.png",
+            "/client-logos/ea7c86fc-1951-405f-8a38-01ca4676a0f4.png",
+            "/client-logos/efbcd060-8452-4db5-8b39-f70da4073b77.png",
+            "/client-logos/f7d2e43a-f74c-4e8d-bf5c-3b73dce9702a.png",
+            "/client-logos/fdef094b-bf05-448e-a17f-a3ebfe92d091.png",
+          ];
 
           return (
             <section className="py-20 md:py-28 bg-surface-container-lowest border-b-4 border-ink relative overflow-hidden">
@@ -637,7 +492,7 @@ export default function WorkPage() {
                 </h2>
               </div>
 
-              {/* Frameless Infinite Marquee Track (No horizontal black bars, larger logos) */}
+              {/* Frameless Infinite Marquee Track (Uniformly sized client logos) */}
               <div className="w-full overflow-hidden relative py-6 md:py-8 bg-surface-container-lowest">
                 {/* Subtle Left/Right Fade Gradient Masks */}
                 <div className="absolute top-0 bottom-0 left-0 w-20 sm:w-40 bg-gradient-to-r from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
@@ -645,19 +500,20 @@ export default function WorkPage() {
 
                 {/* Animated Marquee Row */}
                 <div
-                  className="flex items-center gap-12 sm:gap-20 md:gap-24 w-max hover:[animation-play-state:paused]"
-                  style={{ animation: "marqueeScroll 30s linear infinite" }}
+                  className="flex items-center gap-10 sm:gap-14 md:gap-16 w-max hover:[animation-play-state:paused]"
+                  style={{ animation: "marqueeScroll 45s linear infinite" }}
                 >
-                  {[...combinedLogos, ...combinedLogos, ...combinedLogos].map((client, idx) => (
+                  {[...clientLogos, ...clientLogos, ...clientLogos].map((logoSrc, idx) => (
                     <div
-                      key={`${client.name}-${idx}`}
-                      className="flex items-center justify-center shrink-0 relative h-20 sm:h-28 md:h-32 w-44 sm:w-60 md:w-72 transition-transform duration-300 hover:scale-110"
+                      key={`${logoSrc}-${idx}`}
+                      className="flex items-center justify-center shrink-0 relative h-16 sm:h-20 md:h-24 w-36 sm:w-44 md:w-52 transition-transform duration-300 hover:scale-110"
                     >
                       <Image
                         unoptimized
-                        src={client.logo!}
-                        alt={`${client.name} logo`}
+                        src={logoSrc}
+                        alt={`Partner client logo ${(idx % clientLogos.length) + 1}`}
                         fill
+                        sizes="(max-width: 640px) 144px, 208px"
                         className="object-contain filter grayscale opacity-85 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                       />
                     </div>

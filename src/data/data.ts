@@ -173,6 +173,11 @@ export const siteConfig: SiteConfig = {
         description:
           "Ads Mini's commitment to transparency, data protection, and privacy compliance. Read how we handle personal information, analytics, and client data.",
       },
+      "/terms-of-service": {
+        title: "Terms of Service | Ads Mini",
+        description:
+          "Review the Ads Mini Terms of Service governing our digital marketing, recruitment services, website use, intellectual property, and client engagements.",
+      },
     },
   },
 
