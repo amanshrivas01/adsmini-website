@@ -105,6 +105,7 @@ export default function ContactPage() {
       setApiError(`Network error. Please check your internet connection or email ${env.NEXT_PUBLIC_CONTACT_EMAIL} directly.`);
       setIsSubmitting(false);
     }
+    
   };
 
   return (
@@ -117,7 +118,9 @@ export default function ContactPage() {
               
               {/* Left Column: Text & Direct Contact */}
               <div className="lg:col-span-5">
-                <p className="font-label-mono text-label-mono uppercase mb-4 tracking-widest text-tangerine font-bold">01 / Contact</p>
+                <p className="font-label-mono text-label-mono uppercase mb-4 tracking-widest text-tangerine font-bold">
+                  <span className="hidden sm:inline opacity-70">01 / </span>Contact
+                </p>
                 <h1 className="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl uppercase leading-[0.9] break-words mb-8">
                   Let&apos;s Start a <br />
                   <span className="text-tangerine italic">Conversation</span>

@@ -482,12 +482,12 @@ export default function WorkPage() {
           ];
 
           return (
-            <section className="py-20 md:py-28 bg-surface-container-lowest border-b-4 border-ink relative overflow-hidden">
-              <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mb-12 text-center">
-                <span className="font-label-mono text-tangerine mb-3 block text-xs sm:text-sm font-bold tracking-widest uppercase">
+            <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20 bg-surface-container-lowest border-b-4 border-ink relative overflow-hidden">
+              <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mb-6 sm:mb-8 text-center">
+                <span className="font-label-mono text-tangerine mb-2 block text-xs sm:text-sm font-bold tracking-widest uppercase">
                   TRUSTED PARTNERSHIPS
                 </span>
-                <h2 className="text-ink text-[clamp(32px,5.5vw,64px)] leading-[0.95] font-black uppercase">
+                <h2 className="text-ink text-[clamp(28px,5vw,56px)] leading-[0.95] font-black uppercase">
                   OUR <span className="text-tangerine italic">CLIENTS</span> &amp; PARTNERS
                 </h2>
               </div>

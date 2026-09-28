@@ -60,10 +60,31 @@ export default function AboutPage() {
                 <p>Today, Ads Mini combines digital marketing and recruitment under one roof, helping businesses attract the right customers and build the right teams. Because sustainable growth isn&apos;t just about getting noticed&mdash;it&apos;s about having the people to keep growing.</p>
               </div>
             </div>
-            <div className="md:col-span-4 md:col-start-8 relative mt-8 md:mt-0 reveal-on-scroll" style={{ transitionDelay: "0.2s" }}>
-              <div className="hand-drawn-border bg-surface-container-lowest p-8 brutalist-shadow relative z-10 h-full flex flex-col justify-center">
-                <h3 className="font-headline-md text-headline-md mb-3 md:mb-4 uppercase">The Spark</h3>
-                <p className="font-body-md text-body-md">We didn't start in a boardroom. We started with a whiteboard, too much coffee, and a belief that agencies could do better.</p>
+            <div className="md:col-span-5 md:col-start-8 relative mt-8 md:mt-0 reveal-on-scroll" style={{ transitionDelay: "0.2s" }}>
+              <div className="hand-drawn-border bg-surface-container-lowest p-6 sm:p-8 brutalist-shadow relative z-10 flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-label-mono text-[11px] sm:text-[12px] text-surface-container-lowest font-bold uppercase tracking-widest bg-ink px-2.5 py-1">
+                      [ THE TURNING POINT ]
+                    </span>
+                    <span className="text-[28px] leading-none select-none opacity-20 font-black" aria-hidden="true">
+                      &rdquo;
+                    </span>
+                  </div>
+                  <h3 className="font-headline-md text-[24px] sm:text-[28px] md:text-[32px] leading-tight mb-3 uppercase text-ink">
+                    The Spark
+                  </h3>
+                  <blockquote className="font-body-md text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] text-ink/90 border-l-4 border-tangerine pl-4 my-4 italic">
+                    &ldquo;We didn&apos;t start in a boardroom. We started with a whiteboard, too much coffee, and a belief that agencies could do better.&rdquo;
+                  </blockquote>
+                </div>
+
+                <div className="pt-4 border-t-2 border-ink/15 flex items-center justify-between">
+                  <span className="font-label-mono text-[11px] sm:text-[12px] uppercase font-bold text-ink/70 tracking-wider">
+                    Marketing + Recruitment
+                  </span>
+                  <span className="inline-block w-2.5 h-2.5 bg-tangerine rounded-full"></span>
+                </div>
               </div>
             </div>
           </div>
@@ -161,18 +182,18 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto space-y-24 md:space-y-40 relative z-10">
             {/* Aman */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center relative reveal-on-scroll">
-              <div className="md:col-span-5 relative group order-1">
-                <div className="bg-tangerine w-full aspect-[3/4] border-4 border-ink absolute top-4 left-4 md:top-6 md:left-6 z-0 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+              <div className="md:col-span-5 relative group order-1 w-full max-w-[320px] sm:max-w-sm md:max-w-none mx-auto">
+                <div className="bg-tangerine w-full aspect-[3/4] border-4 border-ink absolute top-3 left-3 sm:top-4 sm:left-4 md:top-6 md:left-6 z-0 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                 <div className="bg-surface-container-lowest w-full aspect-[3/4] border-4 border-ink brutalist-shadow relative z-10 flex flex-col justify-end p-0 overflow-hidden">
                   <Image 
                     src="/aman.png" 
                     alt="Aman Shrivas - Founder & CEO" 
                     width={800} height={1000} unoptimized
-                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    className="absolute inset-0 w-full h-full object-cover object-top grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   />
-                  <div className="relative z-20 bg-white/90 backdrop-blur-sm p-4 md:p-6 border-t-4 border-ink w-full">
-                    <h3 className="font-black text-[24px] md:text-[32px] uppercase leading-none mb-1 text-ink">Aman Shrivas</h3>
-                    <p className="font-label-mono text-[14px] md:text-[16px] text-tangerine uppercase font-bold tracking-wider">Founder &amp; CEO</p>
+                  <div className="relative z-20 bg-white/95 backdrop-blur-sm p-4 md:p-6 border-t-4 border-ink w-full">
+                    <h3 className="font-black text-[22px] sm:text-[24px] md:text-[32px] uppercase leading-none mb-1 text-ink">Aman Shrivas</h3>
+                    <p className="font-label-mono text-[13px] sm:text-[14px] md:text-[16px] text-tangerine uppercase font-bold tracking-wider">Founder &amp; CEO</p>
                   </div>
                 </div>
               </div>
@@ -196,18 +217,18 @@ export default function AboutPage() {
                   <p>What sets Akansha apart is her belief that recruitment is more than filling positions; it&apos;s about connecting the right talent with the right opportunity. She focuses on creating efficient hiring processes, delivering an exceptional candidate experience, and helping organizations build teams that drive long-term growth.</p>
                 </div>
               </div>
-              <div className="md:col-span-5 md:col-start-8 relative group order-1 md:order-2">
-                <div className="bg-tangerine w-full aspect-[3/4] border-4 border-ink absolute top-4 -right-4 md:top-6 md:-right-6 z-0 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+              <div className="md:col-span-5 md:col-start-8 relative group order-1 md:order-2 w-full max-w-[320px] sm:max-w-sm md:max-w-none mx-auto">
+                <div className="bg-tangerine w-full aspect-[3/4] border-4 border-ink absolute top-3 left-3 sm:top-4 sm:-right-4 md:top-6 md:-right-6 sm:left-auto z-0 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                 <div className="bg-surface-container-lowest w-full aspect-[3/4] border-4 border-ink brutalist-shadow relative z-10 flex flex-col justify-end p-0 overflow-hidden">
                   <Image 
                     src="/image.png" 
                     alt="Akansha Shrivastava - Head of Recruitment" 
                     width={800} height={1000} unoptimized
-                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    className="absolute inset-0 w-full h-full object-cover object-top grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   />
-                  <div className="relative z-20 bg-white/90 backdrop-blur-sm p-4 md:p-6 border-t-4 border-ink w-full text-right md:text-left">
-                    <h3 className="font-black text-[24px] md:text-[32px] uppercase leading-none mb-1 text-ink">Akansha Shrivastava</h3>
-                    <p className="font-label-mono text-[14px] md:text-[16px] text-tangerine uppercase font-bold tracking-wider">Head of Recruitment</p>
+                  <div className="relative z-20 bg-white/95 backdrop-blur-sm p-4 md:p-6 border-t-4 border-ink w-full text-left">
+                    <h3 className="font-black text-[22px] sm:text-[24px] md:text-[32px] uppercase leading-none mb-1 text-ink">Akansha Shrivastava</h3>
+                    <p className="font-label-mono text-[13px] sm:text-[14px] md:text-[16px] text-tangerine uppercase font-bold tracking-wider">Head of Recruitment</p>
                   </div>
                 </div>
               </div>

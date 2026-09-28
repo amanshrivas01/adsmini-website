@@ -428,10 +428,10 @@ export default function PrivacyPolicyPage() {
                 <div className="flex items-center gap-3">
                   <span className="font-label-mono uppercase text-secondary text-[12px] tracking-wider w-16">Email:</span>
                   <a
-                    href="mailto:info@adsmini.com"
+                    href="mailto:contact@adsmini.com"
                     className="hover:text-tangerine underline underline-offset-4 decoration-2 transition-colors"
                   >
-                    info@adsmini.com
+                    contact@adsmini.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
