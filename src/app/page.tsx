@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { SectionHeading } from "~/components/ui/SectionHeading";
 import { CallToAction } from "~/components/ui/CallToAction";
+import { StatCard } from "~/components/ui/StatCard";
 import { siteConfig } from "~/data/data";
 
 export default function HomePage() {
@@ -257,48 +258,20 @@ export default function HomePage() {
 
         <div className="px-margin-mobile md:px-margin-desktop grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-8 relative z-10 max-w-7xl mx-auto items-stretch">
           {siteConfig.content.stats.map((stat, idx) => {
-            const isTangerine = stat.variant === "tangerine";
             const rotations = [
-              "transform rotate-0 sm:-rotate-1 lg:-rotate-2",
-              "transform rotate-0 sm:rotate-1 lg:rotate-2",
-              "transform rotate-0 sm:-rotate-1 lg:-rotate-1",
-              "transform rotate-0 sm:rotate-1 lg:rotate-2",
+              "transform rotate-0 sm:-rotate-1 lg:-rotate-2 hover:rotate-0",
+              "transform rotate-0 sm:rotate-1 lg:rotate-2 hover:rotate-0",
+              "transform rotate-0 sm:-rotate-1 lg:-rotate-1 hover:rotate-0",
+              "transform rotate-0 sm:rotate-1 lg:rotate-2 hover:rotate-0",
             ];
             return (
-              <div
+              <StatCard
                 key={idx}
-                className={`flex flex-col items-center justify-between text-center ${
-                  isTangerine
-                    ? "bg-tangerine text-ink"
-                    : "bg-surface-container-lowest text-ink"
-                } border-4 border-ink px-3 py-6 sm:px-5 sm:py-8 brutalist-shadow ${
-                  rotations[idx % rotations.length]
-                } transition-transform min-h-[220px] sm:min-h-[260px]`}
-              >
-                <div className="flex items-center justify-center flex-grow py-2 w-full">
-                  <span
-                    className={`${
-                      stat.value.includes("\n")
-                        ? "text-[clamp(22px,2.8vw,38px)] leading-[1.1]"
-                        : "text-[clamp(28px,3.6vw,52px)] sm:text-[clamp(40px,5vw,72px)] leading-none"
-                    } font-black ${
-                      isTangerine
-                        ? "text-surface-container-lowest drop-shadow-[2px_2px_0_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-                        : "text-tangerine drop-shadow-[2px_2px_0_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-                    } ${stat.value.includes("\n") ? "uppercase" : "whitespace-nowrap"}`}
-                  >
-                    {stat.value.split("\n").map((part, pIdx) => (
-                      <span key={pIdx}>
-                        {part}
-                        {pIdx < stat.value.split("\n").length - 1 && <br />}
-                      </span>
-                    ))}
-                  </span>
-                </div>
-                <span className="text-[13px] sm:text-[15px] lg:text-[16px] font-black uppercase tracking-wider border-t-4 border-ink pt-3 w-full">
-                  {stat.label}
-                </span>
-              </div>
+                value={stat.value}
+                label={stat.label}
+                variant={stat.variant}
+                rotationClassName={rotations[idx % rotations.length]}
+              />
             );
           })}
         </div>

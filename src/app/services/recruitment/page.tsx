@@ -25,13 +25,42 @@ export default function RecruitmentPage() {
         <section className="py-20 md:py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-ink text-paper">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
             <div className="md:col-span-5 relative">
-              <div className="w-full aspect-[3/4] bg-tangerine flex items-center justify-center p-6 md:p-8 relative border-2 border-paper">
-                {/* <Image unoptimized width={1000} height={1000}                   alt="Cartoon mascot leaning casually against a wall"
-                  className="w-full h-auto object-contain mix-blend-multiply filter invert"
-                  src="/placeholder.svg"
-                /> */}
-                <div className="absolute -right-16 top-20 transform rotate-90 hidden md:block">
-                  <span className="font-label-mono text-label-mono tracking-widest text-paper">END-TO-END</span>
+              <div className="w-full bg-tangerine text-ink p-6 sm:p-8 md:p-10 relative border-4 border-ink brutalist-shadow flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="flex items-center justify-between mb-4 border-b-2 border-ink pb-3">
+                    <span className="font-label-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-widest text-ink">
+                      [ 360° TALENT PIPELINE ]
+                    </span>
+                    <span className="inline-block w-3 h-3 bg-ink rounded-full"></span>
+                  </div>
+                  
+                  <h3 className="font-headline-md text-[24px] sm:text-[28px] md:text-[34px] leading-[0.95] font-black uppercase mb-6 text-ink">
+                    SOURCED.<br />
+                    SCREENED.<br />
+                    <span className="text-surface-container-lowest drop-shadow-[2px_2px_0_#000]">PLACED.</span>
+                  </h3>
+
+                  <div className="space-y-3">
+                    <div className="bg-surface-container-lowest border-2 border-ink p-3 shadow-[3px_3px_0_0_#000]">
+                      <span className="font-headline-md text-[20px] sm:text-[24px] font-black block leading-none text-ink">10 DAYS</span>
+                      <span className="font-label-mono text-[11px] font-bold uppercase text-ink/70 tracking-wider">Avg. Candidate Shortlist</span>
+                    </div>
+                    <div className="bg-surface-container-lowest border-2 border-ink p-3 shadow-[3px_3px_0_0_#000]">
+                      <span className="font-headline-md text-[20px] sm:text-[24px] font-black block leading-none text-ink">94%</span>
+                      <span className="font-label-mono text-[11px] font-bold uppercase text-ink/70 tracking-wider">Offer Acceptance Rate</span>
+                    </div>
+                    <div className="bg-surface-container-lowest border-2 border-ink p-3 shadow-[3px_3px_0_0_#000]">
+                      <span className="font-headline-md text-[20px] sm:text-[24px] font-black block leading-none text-ink">90-DAY</span>
+                      <span className="font-label-mono text-[11px] font-bold uppercase text-ink/70 tracking-wider">Placement Retention Focus</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t-2 border-ink flex items-center justify-between">
+                  <span className="font-label-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-wider text-ink">
+                    Zero Fluff • Role-Ready Talent
+                  </span>
+                  <span className="material-symbols-outlined text-ink text-[18px]">verified</span>
                 </div>
               </div>
             </div>
@@ -193,13 +222,13 @@ export default function RecruitmentPage() {
         </section>
 
         {/* Process Timeline */}
-        <section className="py-20 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-tangerine border-ink-b-2 relative grid-bg">
+        <section className="py-12 md:py-20 px-margin-mobile md:px-margin-desktop bg-tangerine border-ink-b-2 relative grid-bg">
           <div className="absolute inset-0 pointer-events-none opacity-20 overflow-hidden">
             <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
               <path className="dashed-path" d="M 0 340 Q 300 220 600 340 T 1200 340" fill="none" stroke="#000" strokeWidth="4"></path>
             </svg>
           </div>
-          <div className="text-center mb-12 md:mb-24 relative z-10">
+          <div className="text-center mb-8 md:mb-12 relative z-10">
             <h2 className="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-ink uppercase">
               How We <br /><span className="text-paper italic">Recruit</span>
             </h2>

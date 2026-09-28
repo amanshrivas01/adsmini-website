@@ -85,7 +85,7 @@ export default function TermsOfServicePage() {
                   01
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  1. About Ads Mini
+                  About Ads Mini
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -103,7 +103,7 @@ export default function TermsOfServicePage() {
                   02
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  2. Our Services
+                  Our Services
                 </h2>
               </div>
 
@@ -140,7 +140,7 @@ export default function TermsOfServicePage() {
                   03
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  3. Use of Our Website
+                  Use of Our Website
                 </h2>
               </div>
               <ul className="space-y-4 text-[15px] md:text-[17px] leading-relaxed">
@@ -173,7 +173,7 @@ export default function TermsOfServicePage() {
                   04
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  4. Client Engagements
+                  Client Engagements
                 </h2>
               </div>
               <ul className="space-y-4 text-[15px] md:text-[17px] leading-relaxed">
@@ -206,7 +206,7 @@ export default function TermsOfServicePage() {
                   05
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  5. Candidate &amp; Recruitment Terms
+                  Candidate &amp; Recruitment Terms
                 </h2>
               </div>
               <ul className="space-y-4 text-[15px] md:text-[17px] leading-relaxed">
@@ -239,7 +239,7 @@ export default function TermsOfServicePage() {
                   06
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  6. Intellectual Property
+                  Intellectual Property
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -257,7 +257,7 @@ export default function TermsOfServicePage() {
                   07
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  7. Confidentiality
+                  Confidentiality
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -275,7 +275,7 @@ export default function TermsOfServicePage() {
                   08
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  8. Third-Party Platforms &amp; Links
+                  Third-Party Platforms &amp; Links
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -293,7 +293,7 @@ export default function TermsOfServicePage() {
                   09
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  9. Disclaimers
+                  Disclaimers
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -311,7 +311,7 @@ export default function TermsOfServicePage() {
                   10
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  10. Limitation of Liability
+                  Limitation of Liability
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -329,7 +329,7 @@ export default function TermsOfServicePage() {
                   11
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  11. Indemnification
+                  Indemnification
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -347,7 +347,7 @@ export default function TermsOfServicePage() {
                   12
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  12. Governing Law &amp; Dispute Resolution
+                  Governing Law &amp; Dispute Resolution
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -365,7 +365,7 @@ export default function TermsOfServicePage() {
                   13
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  13. Changes to These Terms
+                  Changes to These Terms
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 font-medium">
@@ -383,7 +383,7 @@ export default function TermsOfServicePage() {
                   14
                 </span>
                 <h2 className="font-headline-md text-[22px] sm:text-[26px] md:text-[30px] font-black uppercase text-ink">
-                  14. Contact Us
+                  Contact Us
                 </h2>
               </div>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-ink/90 mb-6 font-medium">
@@ -393,10 +393,10 @@ export default function TermsOfServicePage() {
                 <div className="flex items-center gap-3">
                   <span className="font-label-mono uppercase text-secondary text-[12px] tracking-wider w-16">Email:</span>
                   <a
-                    href="mailto:info@adsmini.com"
+                    href="mailto:contact@adsmini.com"
                     className="hover:text-tangerine underline underline-offset-4 decoration-2 transition-colors"
                   >
-                    info@adsmini.com
+                    contact@adsmini.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">

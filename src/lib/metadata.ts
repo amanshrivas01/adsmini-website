@@ -53,7 +53,16 @@ export function constructMetadata(
       description,
       images: [ogImage],
     },
-    icons: [{ rel: "icon", url: "/android-chrome-192x192.png" }],
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      ],
+      shortcut: "/favicon.ico",
+      apple: [
+        { url: "/android-chrome-192x192.png", sizes: "180x180", type: "image/png" },
+      ],
+    },
     robots: pageMeta.noIndex
       ? { index: false, follow: false }
       : { index: true, follow: true },

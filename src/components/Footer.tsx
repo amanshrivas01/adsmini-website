@@ -27,7 +27,7 @@ export function Footer() {
               <li><Link href="/services/digital-marketing" className="hover:text-tangerine transition-colors">Digital Marketing</Link></li>
               <li><Link href="/services/recruitment" className="hover:text-tangerine transition-colors">Recruitment</Link></li>
               <li><Link href="/work" className="hover:text-tangerine transition-colors">Clients &amp; Work</Link></li>
-              <li><Link href="/insights" className="hover:text-tangerine transition-colors">Blog</Link></li>
+              <li><Link href="/blogs" className="hover:text-tangerine transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-tangerine transition-colors">Contact</Link></li>
             </ul>
           </div>

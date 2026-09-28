@@ -422,7 +422,7 @@ export default function DigitalMarketingPage() {
               ].map((item, index) => (
                 <div key={index} className="bg-paper border-4 border-ink p-6 brutalist-shadow hover:bg-tangerine/10 transition-colors">
                   <h3 className="font-black text-base md:text-lg uppercase text-ink mb-2">
-                    🤖 {item.title}
+                    {item.title}
                   </h3>
                   <p className="text-sm font-medium text-ink/90 leading-relaxed">
                     {item.desc}

@@ -192,7 +192,11 @@ export function Navbar() {
 
             {/* 2. Mobile Services Accordion Box */}
             <div className="border-2 border-ink shadow-[4px_4px_0_#000] bg-surface-container-lowest overflow-hidden">
-              <div className="flex items-center justify-between bg-tangerine border-b-2 border-ink">
+              <div
+                className={`flex items-center justify-between transition-colors ${
+                  isActive("/services") ? "bg-tangerine" : "bg-surface-container-lowest"
+                } ${isMobileServicesOpen ? "border-b-2 border-ink" : ""}`}
+              >
                 <Link
                   href="/services"
                   onClick={closeMobileMenu}
@@ -201,8 +205,13 @@ export function Navbar() {
                   SERVICES
                 </Link>
                 <button
+                  type="button"
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className="px-4 py-3 font-black text-base text-ink border-l-2 border-ink hover:bg-surface-container-lowest transition-colors"
+                  className={`px-4 py-3 font-black text-base text-ink border-l-2 border-ink transition-colors ${
+                    isActive("/services")
+                      ? "hover:bg-surface-container-lowest"
+                      : "hover:bg-tangerine"
+                  }`}
                   aria-label="Toggle services sub-menu"
                 >
                   {isMobileServicesOpen ? "▲" : "▼"}
