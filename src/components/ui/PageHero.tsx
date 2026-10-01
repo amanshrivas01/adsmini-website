@@ -42,7 +42,7 @@ export function PageHero({
   }, []);
 
   // Format label to de-emphasize or hide decorative 0X/ on mobile
-  const numMatch = typeof label === "string" ? label.match(/^(\d{2}\s*\/\s*)(.*)$/) : null;
+  const numMatch = typeof label === "string" ? /^(\d{2}\s*\/\s*)(.*)$/.exec(label) : null;
 
   return (
     <section 
